@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40943d747d3b2af4dad74f396bd2ae3c, type: 3}
+  m_Name: Hair Ornament
+  m_EditorClassIdentifier: 
+  itemName: Hair Ornament
+  inventoryIcon: {fileID: 21300000, guid: b4d575520202e564090d4d93a50e69ce, type: 3}
+  enlargedView: {fileID: 21300000, guid: b4d575520202e564090d4d93a50e69ce, type: 3}
+  closeUpView: {fileID: 21300000, guid: dc70cd31384271247813f0b7edd4f02e, type: 3}
+  postInspectDialogue:
+    dialogueLines:
+    - character:
+        name: Giselle
+        icon: {fileID: 0}
+      line: As you dive deeper into the memories of the object, you realise various
+        things.
+  description: A beautiful hair ornament that Catherine Sinclair received as a gift
+    after her engagement to the eldest son of the Sinclair family. It is decorated
+    with small jewels and is worth a considerable amount.
+  closeUpDescription: "On the back of the hair ornament, the words \u201Cwith sincere
+    thanks, the Sinclairs\u201D are engraved. It does not look like this was a marriage
+    of love."

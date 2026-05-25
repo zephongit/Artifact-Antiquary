@@ -19,10 +19,11 @@ public class DialogueManager : MonoBehaviour
     private DialogueLine currentLine;
     private bool isTyping;
 
-    private bool hasPlayedDialogue = false;
     public bool isDialogueActive = false;
 
     public float typingSpeed = 0.05f;
+
+    private DialogueTrigger currentTrigger;
 
     private void Awake()
     {
@@ -42,11 +43,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger)
     {
-        if (hasPlayedDialogue) return;
+        currentTrigger = trigger;
 
-        hasPlayedDialogue = true;
         isDialogueActive = true;
 
         animator.Play("Show");
@@ -107,5 +107,11 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
 
         animator.Play("Hide");
+
+        if (currentTrigger != null)
+        {
+            currentTrigger.GiveReward();
+            currentTrigger = null;
+        }
     }
 }
